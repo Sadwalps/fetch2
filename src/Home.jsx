@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Home() {
   return (
     <>
-      <div className='bg-black grid lg:grid-cols-[repeat(1,4fr)_repeat(1,1fr)]  ' style={{height:"100vh"}} >
+      <div className='bg-black grid lg:grid-cols-[repeat(1,4fr)_repeat(1,1fr)]  ' style={{ height: "100vh" }} >
         <div className='flex flex-col items-center justify-center'>
           <h1 className='font-bold text-white lg:text-6xl md:text-4xl text-4xl '> Hello Welcome To </h1>
           <h1 className='font-bold text-white lg:text-6xl  md:text-4xl text-4xl  mt-3'>Our Shop</h1>

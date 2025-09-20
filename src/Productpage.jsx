@@ -5,30 +5,19 @@ import UseData from './hooks/UseData';
 
 
 function Productpage() {
-  
+
   const data = UseData('https://fakestoreapi.com/products')
   console.log(data);
-  
-  
-  
-  
 
-  
-  
   return (
     <>
-   <Link to={'/'}> <button className='flex items-center justify-center font-extrabold text-6xl text-black hover:text-white bg-amber-50 hover:bg-stone-800  px-3 pb-3 float-right hover:shadow-amber-100'>←</button></Link>
-    <div className='bg-black' id='up'>
-      <h1 className='text-center text-amber-50 font-extrabold lg:text-7xl text-5xl pt-20 pb-10'>All Products</h1>
-    <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1'>
-      {data?.map((item)=>(<div className='text-white p-5 flex items-center justify-center'><Productcard fetchdata={item}/></div>))  }
-        
+      <Link to={'/'}> <button className='flex items-center justify-center font-extrabold text-6xl text-black hover:text-white bg-amber-50 hover:bg-stone-800  px-3 pb-3 float-right hover:shadow-amber-100'>←</button></Link>
+      <div className='bg-black' id='up'>
+        <h1 className='text-center text-amber-50 font-extrabold lg:text-7xl text-5xl pt-20 pb-10'>All Products</h1>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1'>
+          {data?.map((item) => (<div className='text-white p-5 flex items-center justify-center'><Productcard fetchdata={item} /></div>))}
+        </div>
       </div>
-    
-
-      
-    </div>
-     <div className='bg-black'> <button className='flex items-center justify-center font-extrabold text-6xl text-black hover:text-white bg-amber-50 hover:bg-stone-800  px-3 pb-3 float-right hover:shadow-amber-100'>up</button></div>
     </>
   )
 }
